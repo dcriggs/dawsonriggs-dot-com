@@ -76,6 +76,7 @@ export const siteConfig = {
       summary:
         "MyChart is Epic’s patient portal used by 190M+ patients for secure online healthcare access. This role built my foundation in patient access workflows, health system operations, and enterprise healthcare software delivery.",
       highlights: [
+        "Supported Epic telehealth workflows, including Epic Video Client (EVC) and Teladoc integrations.",
         "Led integration and post-go-live support for 8 major healthcare organizations, customizing platform features to align with operational and clinical requirements.",
         "Wrote and optimized SQL queries for Epic’s largest patient record reconciliation, matching roughly 10M records.",
         "Diagnosed and documented 97+ recurring error patterns as MyChart Error Log Tech Lead, accelerating root cause analysis and resolution.",

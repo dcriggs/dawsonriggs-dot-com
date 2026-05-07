@@ -9,6 +9,10 @@ type ProjectCardProps = {
   demoUrl?: string;
 };
 
+function isExternalHref(href: string) {
+  return /^https?:\/\//.test(href);
+}
+
 export function ProjectCard({ title, type, description, tags, githubUrl, demoUrl }: ProjectCardProps) {
   const links = [
     githubUrl ? { href: githubUrl, label: "GitHub" } : null,
@@ -29,11 +33,22 @@ export function ProjectCard({ title, type, description, tags, githubUrl, demoUrl
       </div>
       {links.length > 0 ? (
         <div className="mt-6 flex gap-4 text-sm font-semibold text-slate-700">
-          {links.map((link) => (
-            <Link key={`${title}-${link.label}`} href={link.href} className="hover:text-teal-700" aria-label={`${title} ${link.label}`}>
-              {link.label}
-            </Link>
-          ))}
+          {links.map((link) => {
+            const isExternal = isExternalHref(link.href);
+
+            return (
+              <Link
+                key={`${title}-${link.label}`}
+                href={link.href}
+                className="hover:text-teal-700"
+                aria-label={`${title} ${link.label}`}
+                rel={isExternal ? "nofollow noreferrer" : undefined}
+                target={isExternal ? "_blank" : undefined}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
       ) : null}
     </article>

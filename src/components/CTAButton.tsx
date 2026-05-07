@@ -14,10 +14,18 @@ const variants = {
     "text-slate-700 hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-slate-700",
 };
 
-export function CTAButton({ className = "", variant = "primary", ...props }: CTAButtonProps) {
+function isExternalHref(href: CTAButtonProps["href"]) {
+  return typeof href === "string" && /^https?:\/\//.test(href);
+}
+
+export function CTAButton({ className = "", rel, target, variant = "primary", ...props }: CTAButtonProps) {
+  const isExternal = isExternalHref(props.href);
+
   return (
     <Link
       className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 ${variants[variant]} ${className}`}
+      rel={rel ?? (isExternal ? "nofollow noreferrer" : undefined)}
+      target={target ?? (isExternal ? "_blank" : undefined)}
       {...props}
     />
   );
