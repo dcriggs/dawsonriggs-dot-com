@@ -7,8 +7,7 @@ export const siteConfig = {
     "Integration Engineer | Former Epic MyChart TS | Shipping EHR Integrations, Solving Edge Cases, Unblocking Go-Lives | FHIR & HL7",
   intro:
     "I help healthcare technology teams ship reliable EHR integrations, solve messy implementation problems, and unblock go-lives across Epic, Oracle Health, APIs, and healthcare data workflows.",
-  linkedinUrl: "https://www.linkedin.com/in/dawsonriggs/",
-  email: "mailto:hello@dawsonriggs.com",
+  linkedinUrl: "https://www.linkedin.com/in/dawson-riggs/",
   nav: [
     { label: "Story", href: "#story" },
     { label: "Expertise", href: "#expertise" },
@@ -58,24 +57,29 @@ export const siteConfig = {
     {
       company: "Luma Health",
       role: "Integration Engineer",
-      dates: "Editable dates · Present",
+      dates: "Oct. 2022 – Present",
       summary:
-        "Healthcare startup integration work across EHR connectivity, implementation delivery, production support, and customer-facing technical problem solving.",
+        "Luma Health is the leading AI-native patient engagement platform, backed by $160M in Series C funding. My work spans EHR integration delivery, production reliability, automation, and customer-facing technical ownership.",
       highlights: [
-        "Supported healthcare integrations across Epic and Oracle Health/Cerner environments.",
-        "Helped unblock go-lives, escalations, production issues, API workflows, and implementation delivery.",
-        "Improved reliability and contributed to efforts that helped reduce integration/API costs.",
+        "Reduced Epic API costs from $1.3M/month to $134K/month—about 90% savings—through code optimization.",
+        "Implemented and maintained HL7 and API integrations with enterprise EHRs including Epic, Cerner, Meditech, NextGen, and eClinicalWorks.",
+        "Owned the Meditech Cold Feed pipeline lifecycle across implementation, debugging, code enhancements, and documentation, improving PDF writeback reliability from 93% to 100% for key customers.",
+        "Led 20+ new customer go-lives by configuring integration workflows and data sync processes across implementation, engineering, sales, and customer success teams.",
+        "Developed JavaScript, TypeScript, and Python scripts to debug production issues, automate monitoring, and resolve complex data/API issues with minimal downtime.",
+        "Mentored engineering interns and new team members through onboarding and technical development.",
       ],
     },
     {
       company: "Epic Systems",
-      role: "MyChart Technical Services",
-      dates: "Editable dates",
+      role: "Technical Solutions Engineer, MyChart",
+      dates: "Previous role",
       summary:
-        "Technical services experience supporting patient access products and the operational realities of large health systems.",
+        "MyChart is Epic’s patient portal used by 190M+ patients for secure online healthcare access. This role built my foundation in patient access workflows, health system operations, and enterprise healthcare software delivery.",
       highlights: [
-        "Supported MyChart and patient-access workflows for large health systems.",
-        "Built a foundation in EHR operations, customer support, and healthcare software delivery.",
+        "Led integration and post-go-live support for 8 major healthcare organizations, customizing platform features to align with operational and clinical requirements.",
+        "Wrote and optimized SQL queries for Epic’s largest patient record reconciliation, matching roughly 10M records.",
+        "Diagnosed and documented 97+ recurring error patterns as MyChart Error Log Tech Lead, accelerating root cause analysis and resolution.",
+        "Supported Epic’s onboarding bootcamp by reviewing new engineers’ code and mentoring certification projects.",
       ],
     },
   ],
@@ -86,8 +90,8 @@ export const siteConfig = {
       description:
         "Educational healthcare interoperability sandbox for learning HL7 v2, X12 278, payload mapping, validation, and integration debugging.",
       tags: ["HL7 v2", "X12 278", "Mapping", "Debugging"],
-      githubUrl: "#",
-      demoUrl: "#",
+      githubUrl: "https://github.com/dcriggs/prior-auth-integration-lab",
+      demoUrl: "https://prior-auth-integration-lab.vercel.app/",
     },
     {
       title: "Pixel Ape Labs Website Revamp",
@@ -95,8 +99,8 @@ export const siteConfig = {
       description:
         "Full-stack web work for a Web3 client, modernizing site structure, user flows, and product positioning.",
       tags: ["Next.js", "Product", "Web3", "UX"],
-      githubUrl: "#",
-      demoUrl: "#",
+      githubUrl: "",
+      demoUrl: "https://pixelapelabs.com/",
     },
     {
       title: "Solana Raffle Platform",
@@ -104,8 +108,8 @@ export const siteConfig = {
       description:
         "Full-stack Solana application involving NFT/SPL token transfers, escrow logic, database design, and frontend delivery.",
       tags: ["Solana", "Escrow", "Database", "Frontend"],
-      githubUrl: "#",
-      demoUrl: "#",
+      githubUrl: "",
+      demoUrl: "https://kingsrealm.io/",
     },
     {
       title: "More projects coming soon",
@@ -113,7 +117,7 @@ export const siteConfig = {
       description:
         "A place for future healthcare integration labs, implementation notes, and product experiments as they become ready to share.",
       tags: ["Healthcare", "Writing", "Labs"],
-      githubUrl: "#",
+      githubUrl: "https://github.com/dcriggs",
       demoUrl: "#",
     },
   ],
@@ -122,19 +126,22 @@ export const siteConfig = {
       title: "What Healthcare Integrations Taught Me About Debugging",
       description:
         "A reflection on reading logs, reconstructing workflows, and separating signal from noise in high-stakes implementation work.",
-      status: "Draft placeholder",
+      status: "Published reflection",
+      href: "/writing/healthcare-integrations-debugging",
     },
     {
       title: "The Gray Area Between Engineering and Implementation",
       description:
         "Why some of the most important technical work happens between product behavior, customer expectations, and operational reality.",
-      status: "Draft placeholder",
+      status: "Published reflection",
+      href: "/writing/the-gray-area-between-engineering-and-implementation",
     },
     {
       title: "Why Reliable Go-Lives Depend on More Than Code",
       description:
         "A practical look at readiness, communication, validation, and ownership before production traffic starts flowing.",
-      status: "Draft placeholder",
+      status: "Published reflection",
+      href: "/writing/reliable-go-lives-more-than-code",
     },
   ],
   values: [

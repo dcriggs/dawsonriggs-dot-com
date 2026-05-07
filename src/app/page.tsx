@@ -109,8 +109,8 @@ export default function Home() {
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-700">{article.status}</p>
               <h3 className="mt-4 text-xl font-semibold leading-7 text-slate-950">{article.title}</h3>
               <p className="mt-3 flex-1 leading-7 text-slate-600">{article.description}</p>
-              <Link href="#" className="mt-6 text-sm font-semibold text-teal-700 hover:text-teal-900" aria-label={`${article.title} placeholder`}>
-                Read later →
+              <Link href={article.href} className="mt-6 text-sm font-semibold text-teal-700 hover:text-teal-900" aria-label={`${article.title} ${article.href === "#" ? "placeholder" : "article"}`}>
+                {article.href === "#" ? "Coming soon →" : "Read reflection →"}
               </Link>
             </Card>
           ))}
@@ -131,13 +131,10 @@ export default function Home() {
       <Section id="contact" eyebrow="Contact" title="Open to thoughtful professional conversations." className="pb-14">
         <div className="rounded-[2rem] border border-slate-200 bg-slate-950 p-8 text-white shadow-2xl shadow-slate-950/20 sm:p-10">
           <p className="max-w-3xl text-xl leading-9 text-slate-100">
-            The best way to connect with me professionally is LinkedIn. I&apos;m open to conversations around healthcare integrations, solutions engineering, technical consulting, interoperability, and implementation work where reliability matters.
+            The best way to connect with me professionally is LinkedIn. I&apos;m open to conversations around healthcare integrations, solutions engineering, technical consulting, interoperability, and implementation work where reliability matters. Send me a LinkedIn DM and I&apos;ll share my email address if needed.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <CTAButton href={siteConfig.linkedinUrl}>Connect on LinkedIn</CTAButton>
-            <CTAButton href={siteConfig.email} variant="secondary">
-              Email placeholder
-            </CTAButton>
           </div>
         </div>
       </Section>

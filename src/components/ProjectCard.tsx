@@ -5,11 +5,16 @@ type ProjectCardProps = {
   type: string;
   description: string;
   tags: string[];
-  githubUrl: string;
-  demoUrl: string;
+  githubUrl?: string;
+  demoUrl?: string;
 };
 
 export function ProjectCard({ title, type, description, tags, githubUrl, demoUrl }: ProjectCardProps) {
+  const links = [
+    githubUrl ? { href: githubUrl, label: "GitHub" } : null,
+    demoUrl ? { href: demoUrl, label: "Demo" } : null,
+  ].filter((link): link is { href: string; label: string } => Boolean(link));
+
   return (
     <article className="flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-950/5 transition hover:-translate-y-1 hover:border-teal-200 hover:shadow-xl hover:shadow-slate-950/10">
       <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">{type}</p>
@@ -22,14 +27,15 @@ export function ProjectCard({ title, type, description, tags, githubUrl, demoUrl
           </span>
         ))}
       </div>
-      <div className="mt-6 flex gap-4 text-sm font-semibold text-slate-700">
-        <Link href={githubUrl} className="hover:text-teal-700" aria-label={`${title} GitHub placeholder`}>
-          GitHub
-        </Link>
-        <Link href={demoUrl} className="hover:text-teal-700" aria-label={`${title} demo placeholder`}>
-          Demo
-        </Link>
-      </div>
+      {links.length > 0 ? (
+        <div className="mt-6 flex gap-4 text-sm font-semibold text-slate-700">
+          {links.map((link) => (
+            <Link key={`${title}-${link.label}`} href={link.href} className="hover:text-teal-700" aria-label={`${title} ${link.label}`}>
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      ) : null}
     </article>
   );
 }

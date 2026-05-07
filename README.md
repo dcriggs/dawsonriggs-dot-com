@@ -61,13 +61,13 @@ Most website content lives in one editable configuration file:
 Update this file to change:
 
 - Hero copy and calls to action
-- LinkedIn and email links
+- LinkedIn link and contact instructions
 - Navigation labels
 - About/story paragraphs
 - Expertise cards
-- Experience highlights and placeholder dates
+- Experience highlights and dates
 - Project cards and placeholder GitHub/demo links
-- Writing placeholders
+- Writing placeholders and article links
 - Values and contact copy
 
 Reusable UI components live in `src/components/`:
@@ -78,13 +78,13 @@ Reusable UI components live in `src/components/`:
 - `ExperienceItem.tsx`
 - `CTAButton.tsx`
 
-The single-page route lives at `src/app/page.tsx`, with sitewide metadata in `src/app/layout.tsx`.
+The home page route lives at `src/app/page.tsx`, with sitewide metadata in `src/app/layout.tsx`. Writing article routes currently live under `src/app/writing/healthcare-integrations-debugging/page.tsx`, `src/app/writing/the-gray-area-between-engineering-and-implementation/page.tsx`, and `src/app/writing/reliable-go-lives-more-than-code/page.tsx`.
 
 ## Future improvements
 
 This project is intentionally structured so it can grow beyond a single page. Good next additions include:
 
-- Blog posts using MDX or a headless CMS
+- Additional blog posts using MDX or a headless CMS
 - Project detail pages under `/projects/[slug]`
 - Downloadable resume page or asset
 - Speaking/writing archive
