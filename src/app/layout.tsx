@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://dawsonriggs.com"),
   title: {
@@ -9,18 +8,27 @@ export const metadata: Metadata = {
     template: "%s | Dawson Riggs",
   },
   description:
-    "Dawson Riggs is an Integration Engineer focused on healthcare interoperability, Epic and Oracle Health/Cerner integrations, APIs, FHIR, HL7, implementation troubleshooting, and reliable go-lives.",
+    "Dawson Riggs is a Healthcare Integration Engineer focused on healthcare interoperability, EHR integrations, Epic integrations, Oracle Health/Cerner, FHIR, HL7, REST APIs, SOAP APIs, SQL, implementation engineering, go-live support, and production troubleshooting.",
   keywords: [
     "Dawson Riggs",
+    "Healthcare Integration Engineer",
     "Integration Engineer",
     "Healthcare interoperability",
     "EHR integrations",
-    "Epic MyChart",
+    "Epic integrations",
     "Oracle Health",
     "Cerner",
     "FHIR",
     "HL7",
-    "Healthcare technology",
+    "REST APIs",
+    "SOAP APIs",
+    "SQL",
+    "Healthcare workflows",
+    "Implementation engineering",
+    "Solutions engineering",
+    "Go-live support",
+    "Production troubleshooting",
+    "Healthcare SaaS",
   ],
   authors: [{ name: "Dawson Riggs" }],
   creator: "Dawson Riggs",
@@ -29,14 +37,14 @@ export const metadata: Metadata = {
     url: "https://dawsonriggs.com",
     title: "Dawson Riggs | Healthcare Integration Engineer",
     description:
-      "Healthcare integration engineer shipping reliable EHR integrations, solving implementation edge cases, and unblocking go-lives across Epic, Oracle Health, APIs, FHIR, and HL7.",
+      "Healthcare interoperability specialist helping teams deliver reliable EHR integrations across Epic, Oracle Health/Cerner, FHIR, HL7, REST APIs, SOAP APIs, SQL, implementation, go-live support, and production systems.",
     siteName: "Dawson Riggs",
   },
   twitter: {
     card: "summary_large_image",
     title: "Dawson Riggs | Healthcare Integration Engineer",
     description:
-      "Healthcare interoperability, EHR integrations, API workflows, implementation troubleshooting, and customer-facing technical leadership.",
+      "Healthcare interoperability, EHR integrations, Epic and Oracle Health/Cerner workflows, FHIR, HL7, implementation engineering, and production troubleshooting.",
   },
   alternates: {
     canonical: "https://dawsonriggs.com",
