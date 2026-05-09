@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ComponentProps } from "react";
 
 type CTAButtonProps = ComponentProps<typeof Link> & {
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "dark";
 };
 
 const variants = {
@@ -12,6 +12,8 @@ const variants = {
     "border border-slate-300 bg-white/80 text-slate-900 hover:border-teal-300 hover:bg-teal-50 focus-visible:outline-teal-700",
   ghost:
     "text-slate-700 hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-slate-700",
+  dark:
+    "border border-white/15 bg-white/10 text-white hover:border-cyan-300/40 hover:bg-white/15 focus-visible:outline-cyan-300",
 };
 
 function isExternalHref(href: CTAButtonProps["href"]) {

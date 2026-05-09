@@ -1,125 +1,125 @@
 export const siteConfig = {
   name: "Dawson Riggs",
   domain: "dawsonriggs.com",
-  headline:
-    "Integration Engineer focused on healthcare interoperability, EHR integrations, and customer-facing technical problem solving.",
-  linkedInHeadline:
-    "Integration Engineer | Former Epic MyChart TS | Shipping EHR Integrations, Solving Edge Cases, Unblocking Go-Lives | FHIR & HL7",
+  title: "Healthcare Integration Engineer",
+  headline: "I help healthcare technology teams deliver reliable EHR integrations that work in real-world clinical and operational environments.",
+  linkedInHeadline: "Integration Engineer | Epic & Oracle Health Interoperability | FHIR, HL7 & EHR Integrations",
   intro:
-    "I help healthcare technology teams ship reliable EHR integrations, solve messy implementation problems, and unblock go-lives across Epic, Oracle Health, APIs, and healthcare data workflows.",
+    "My work sits at the intersection of engineering, implementation, production support, and customer workflows—designing, troubleshooting, and improving integrations across Epic, Oracle Health/Cerner, Meditech, NextGen, eClinicalWorks, FHIR, HL7, REST APIs, SOAP APIs, and SQL-backed production systems.",
   linkedinUrl: "https://www.linkedin.com/in/dawson-riggs/",
   nav: [
-    { label: "Story", href: "#story" },
-    { label: "Expertise", href: "#expertise" },
+    { label: "Focus", href: "#expertise" },
     { label: "Experience", href: "#experience" },
-    { label: "Projects", href: "#projects" },
+    { label: "Case Studies", href: "#projects" },
     { label: "Writing", href: "#writing" },
     { label: "Contact", href: "#contact" },
   ],
+  heroPillars: ["Epic integrations", "Oracle Health/Cerner", "FHIR + HL7", "REST + SOAP APIs", "SQL + production systems"],
+  systemNodes: ["Epic EHR", "Hospital systems", "Patient engagement", "Clinical workflows", "FHIR APIs", "HL7 messaging", "Cloud services", "Analytics"],
+  metrics: [
+    { value: "~90%", label: "Epic API cost reduction" },
+    { value: "20+", label: "customer go-lives led" },
+    { value: "400+", label: "complex support tickets resolved" },
+    { value: "93% → 100%", label: "Meditech PDF writeback reliability" },
+  ],
   about: [
-    "I started my career at Epic Systems as a MyChart Technical Services engineer, where I learned how patient experience workflows, health system operations, and real-world EHR implementation constraints fit together. That foundation shaped how I approach technical work: the system has to function, but it also has to support the people trying to deliver care.",
-    "At Luma Health, I grew into healthcare startup integration work across EHR connectivity, implementation delivery, escalation support, and customer-facing problem solving. I spend a lot of time in the intersection between engineering, delivery, support, and customer success—translating ambiguous problems into clear next steps and helping teams get live with confidence.",
-    "My strongest work happens in the gray area where technical systems, customer needs, and operational reality meet. I care about reliability, clarity, ownership, and practical problem-solving: understanding the workflow, making invisible behavior visible, and staying with the problem until the outcome is dependable.",
+    "I started my career at Epic Systems as a MyChart Technical Solutions Engineer supporting patient experience workflows, telehealth integrations, and large health system go-lives. That foundation shaped how I think about interoperability: the technical path has to work, but it also has to survive operational reality.",
+    "At Luma Health, I moved from Enterprise Technical Support Engineer to Implementation Specialist to Integration Engineer, working across EHR connectivity, healthcare workflows, customer implementation, escalation support, and production reliability.",
+    "My strongest work happens in the gray area where technical systems, customer needs, implementation constraints, and operational reality intersect. I focus on making system behavior visible, translating ambiguity into concrete next steps, and staying with the problem until the integration is dependable.",
   ],
   expertise: [
     {
+      title: "Healthcare Interoperability",
+      description:
+        "Connecting healthcare SaaS products to clinical and operational systems with careful attention to data exchange, workflow impact, and long-term maintainability.",
+    },
+    {
       title: "EHR Integrations",
       description:
-        "Designing, validating, and supporting healthcare integrations that connect products to real clinical and patient-access workflows.",
+        "Implementing and supporting EHR integrations across Epic, Oracle Health/Cerner, Meditech, NextGen, and eClinicalWorks environments.",
     },
     {
-      title: "API & FHIR Workflows",
+      title: "Implementation & Go-Live Support",
       description:
-        "Working through API behavior, FHIR resources, payload validation, edge cases, and implementation details that affect production reliability.",
+        "Guiding integrations from configuration and validation through launch readiness, customer communication, go-live support, and post-launch stabilization.",
     },
     {
-      title: "Epic & Oracle Health/Cerner Connectivity",
+      title: "Production Troubleshooting",
       description:
-        "Supporting integrations in Epic and Oracle Health/Cerner environments with an understanding of EHR operations and customer constraints.",
+        "Debugging FHIR, HL7, REST API, SOAP API, SQL, and workflow issues with a calm, structured approach to restore reliability and reduce downtime.",
     },
     {
-      title: "Implementation Troubleshooting",
+      title: "Workflow Systems",
       description:
-        "Debugging go-live blockers, production issues, escalations, and ambiguous defects with a calm, structured, first-principles approach.",
+        "Translating healthcare workflows into practical integration behavior, data mappings, automation logic, and supportable implementation patterns.",
     },
     {
-      title: "Data Mapping & Workflow Design",
+      title: "Technical Customer Ownership",
       description:
-        "Translating operational requirements into data mappings, configuration decisions, and workflows that teams can maintain.",
-    },
-    {
-      title: "Customer-Facing Technical Leadership",
-      description:
-        "Communicating clearly with technical and non-technical stakeholders, building trust, and keeping delivery moving through uncertainty.",
+        "Bridging engineering, implementation, support, customer success, and health system stakeholders with clear communication and accountable follow-through.",
     },
   ],
   experiences: [
     {
       company: "Luma Health",
-      role: "Integration Engineer",
+      role: "Integration Engineer · Implementation Specialist · Enterprise Technical Support Engineer",
       dates: "Oct. 2022 – Present",
       summary:
-        "Luma Health is the leading AI-native patient engagement platform, backed by $160M in Series C funding. My work spans EHR integration delivery, production reliability, automation, and customer-facing technical ownership.",
+        "Progressed across support, implementation, and integration engineering roles focused on EHR connectivity, healthcare workflow delivery, production support, and customer-facing technical ownership.",
       highlights: [
-        "Reduced Epic API costs from $1.3M/month to $134K/month—about 90% savings—through code optimization.",
+        "Reduced Epic API costs from $1.3M/month to $134K/month—about 90% savings—through integration and workflow optimization.",
         "Implemented and maintained HL7 and API integrations with enterprise EHRs including Epic, Cerner, Meditech, NextGen, and eClinicalWorks.",
-        "Owned the Meditech Cold Feed pipeline lifecycle across implementation, debugging, code enhancements, and documentation, improving PDF writeback reliability from 93% to 100% for key customers.",
-        "Led 20+ new customer go-lives by configuring integration workflows and data sync processes across implementation, engineering, sales, and customer success teams.",
-        "Developed JavaScript, TypeScript, and Python scripts to debug production issues, automate monitoring, and resolve complex data/API issues with minimal downtime.",
-        "Mentored engineering interns and new team members through onboarding and technical development.",
+        "Developed an Epic SOAP API integration workflow powering AI-enabled IVR prescription refill automation and patient self-service.",
+        "Owned the Meditech Cold Feed pipeline across implementation, debugging, code enhancements, and documentation, improving PDF writeback reliability from 93% to 100% for key customers.",
+        "Led 20+ customer go-lives by configuring integration workflows and data synchronization processes across implementation, engineering, and customer success teams.",
+        "Resolved 400+ Zendesk tickets involving complex EHR integrations, APIs, and workflow issues while maintaining a greater than 95% CSAT.",
       ],
     },
     {
       company: "Epic Systems",
       role: "Technical Solutions Engineer, MyChart",
-      dates: "Previous role",
+      dates: "Jun. 2019 – Sep. 2022",
       summary:
-        "MyChart is Epic’s patient portal used by 190M+ patients for secure online healthcare access. This role built my foundation in patient access workflows, health system operations, and enterprise healthcare software delivery.",
+        "Supported patient experience workflows, enterprise healthcare integrations, and post-go-live operational issues for large healthcare organizations using Epic MyChart.",
       highlights: [
         "Supported Epic telehealth workflows, including Epic Video Client (EVC) and Teladoc integrations.",
-        "Led integration and post-go-live support for 8 major healthcare organizations, customizing platform features to align with operational and clinical requirements.",
-        "Wrote and optimized SQL queries for Epic’s largest patient record reconciliation, matching roughly 10M records.",
-        "Diagnosed and documented 97+ recurring error patterns as MyChart Error Log Tech Lead, accelerating root cause analysis and resolution.",
-        "Supported Epic’s onboarding bootcamp by reviewing new engineers’ code and mentoring certification projects.",
+        "Led integration and post-go-live support for 8 major healthcare organizations, aligning platform functionality with operational and clinical workflow requirements.",
+        "Diagnosed and documented 97+ recurring MyChart error patterns as MyChart Error Log Tech Lead, accelerating root cause analysis and issue resolution.",
+        "Wrote and optimized SQL queries supporting Epic’s largest patient record reconciliation initiative, with roughly 10M records matched.",
+        "Collaborated directly with healthcare organizations to troubleshoot interoperability, workflow, and production support issues across large-scale patient engagement systems.",
       ],
     },
   ],
   projects: [
     {
-      title: "Prior Auth Integration Lab",
-      type: "Healthcare interoperability sandbox",
+      title: "Reducing Epic API Costs by 90%",
+      type: "Future case study",
       description:
-        "Educational healthcare interoperability sandbox for learning HL7 v2, X12 278, payload mapping, validation, and integration debugging.",
-      tags: ["HL7 v2", "X12 278", "Mapping", "Debugging"],
+        "A planned writeup on finding waste in production integration behavior, aligning workflow design with API utilization, and reducing monthly Epic API costs from $1.3M to $134K.",
+      tags: ["Epic integrations", "Cost optimization", "Production systems", "Workflow design"],
+    },
+    {
+      title: "Meditech Cold Feed Pipeline Reliability",
+      type: "Future case study",
+      description:
+        "A placeholder for a practical reliability case study covering implementation, debugging, code enhancements, documentation, and PDF writeback improvements from 93% to 100% for key customers.",
+      tags: ["Meditech", "Reliability", "Pipeline debugging", "Documentation"],
+    },
+    {
+      title: "Building Reliable EHR Integration Workflows",
+      type: "Future case study",
+      description:
+        "A future technical narrative on designing supportable healthcare workflows across EHR APIs, HL7 messaging, configuration choices, customer constraints, and go-live readiness.",
+      tags: ["EHR integrations", "FHIR", "HL7", "Go-live support"],
+    },
+    {
+      title: "HL7 / FHIR / SOAP Integration Lab",
+      type: "Integration lab placeholder",
+      description:
+        "A living space for lightweight examples, implementation notes, and experiments around payload validation, mapping, troubleshooting, and workflow-oriented integration design.",
+      tags: ["FHIR", "HL7", "SOAP APIs", "REST APIs"],
       githubUrl: "https://github.com/dcriggs/prior-auth-integration-lab",
       demoUrl: "https://prior-auth-integration-lab.vercel.app/",
-    },
-    {
-      title: "Pixel Ape Labs Website Revamp",
-      type: "Client web product",
-      description:
-        "Full-stack web work for a Web3 client, modernizing site structure, user flows, and product positioning.",
-      tags: ["Next.js", "Product", "Web3", "UX"],
-      githubUrl: "",
-      demoUrl: "https://pixelapelabs.com/",
-    },
-    {
-      title: "Solana Raffle Platform",
-      type: "Full-stack application",
-      description:
-        "Full-stack Solana application involving NFT/SPL token transfers, escrow logic, database design, and frontend delivery.",
-      tags: ["Solana", "Escrow", "Database", "Frontend"],
-      githubUrl: "",
-      demoUrl: "https://kingsrealm.io/",
-    },
-    {
-      title: "More projects coming soon",
-      type: "Living portfolio",
-      description:
-        "A place for future healthcare integration labs, implementation notes, and product experiments as they become ready to share.",
-      tags: ["Healthcare", "Writing", "Labs"],
-      githubUrl: "https://github.com/dcriggs",
-      demoUrl: "#",
     },
   ],
   writing: [
@@ -147,9 +147,9 @@ export const siteConfig = {
   ],
   values: [
     "Own the problem end-to-end.",
-    "Communicate clearly across technical and non-technical teams.",
     "Make invisible system behavior visible.",
+    "Communicate clearly across technical and operational teams.",
     "Debug from first principles.",
-    "Build trust by shipping reliable outcomes.",
+    "Design for real-world reliability.",
   ],
 };
