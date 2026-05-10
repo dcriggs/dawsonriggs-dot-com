@@ -68,11 +68,18 @@ export function ProjectCard({ title, type, description, tags, visual, githubUrl,
   ].filter((link): link is { href: string; label: string } => Boolean(link));
 
   return (
-    <article className="flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-950/5 transition hover:-translate-y-1 hover:border-teal-200 hover:shadow-xl hover:shadow-slate-950/10">
+    <article className="group relative flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-950/5 transition hover:-translate-y-1 hover:border-teal-200 hover:shadow-xl hover:shadow-slate-950/10">
+      {href ? (
+        <Link
+          href={href}
+          className="absolute inset-0 z-10 rounded-3xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-700"
+          aria-label={`Open ${title}`}
+        />
+      ) : null}
       <MiniArchitectureVisual visual={visual} />
       <div className="flex flex-1 flex-col p-2 pt-5">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">{type}</p>
-        <h3 className="mt-3 text-xl font-semibold text-slate-950">{title}</h3>
+        <h3 className="mt-3 text-xl font-semibold text-slate-950 transition group-hover:text-teal-800">{title}</h3>
         <p className="mt-3 flex-1 leading-7 text-slate-600">{description}</p>
         <div className="mt-6 flex flex-wrap gap-2">
           {tags.map((tag) => (
@@ -82,7 +89,7 @@ export function ProjectCard({ title, type, description, tags, visual, githubUrl,
           ))}
         </div>
         {links.length > 0 ? (
-          <div className="mt-6 flex gap-4 text-sm font-semibold text-slate-700">
+          <div className="relative z-20 mt-6 flex gap-4 text-sm font-semibold text-slate-700">
             {links.map((link) => {
               const isExternal = isExternalHref(link.href);
 
