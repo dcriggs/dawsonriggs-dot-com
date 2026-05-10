@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ContactCTA } from "@/components/ContactCTA";
 import { CTAButton } from "@/components/CTAButton";
-import { assetUrls, siteConfig } from "@/data/site";
+import { assetUrls } from "@/data/site";
 
 const labLinks = {
   github: "https://github.com/dcriggs/prior-auth-integration-lab",
@@ -256,15 +257,9 @@ export default function Hl7FhirSoapIntegrationLabPage() {
         </section>
 
         <section className="mx-auto max-w-5xl px-6 pb-20 lg:px-8">
-          <div className="flex flex-col gap-3 rounded-[2rem] border border-slate-800 bg-slate-950 p-6 text-white sm:flex-row sm:items-center sm:justify-between sm:p-8">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-300">Connect</p>
-              <p className="mt-2 max-w-2xl text-slate-200">
-                Want to talk HL7, FHIR, SOAP APIs, payload validation, or practical healthcare interoperability experimentation?
-              </p>
-            </div>
-            <CTAButton href={siteConfig.linkedinUrl} variant="dark">Connect on LinkedIn</CTAButton>
-          </div>
+          <ContactCTA>
+            Want to talk HL7, FHIR, SOAP APIs, payload validation, or practical healthcare interoperability experimentation?
+          </ContactCTA>
         </section>
       </article>
     </main>

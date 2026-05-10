@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CTAButton } from "@/components/CTAButton";
-import { siteConfig } from "@/data/site";
+import { ContactCTA } from "@/components/ContactCTA";
 
 export const metadata: Metadata = {
   title: "What Healthcare Integrations Taught Me About Debugging",
@@ -175,15 +174,9 @@ export default function HealthcareIntegrationsDebuggingPage() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 rounded-[2rem] border border-slate-200 bg-slate-950 p-6 text-white sm:flex-row sm:items-center sm:justify-between sm:p-8">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-300">Connect</p>
-            <p className="mt-2 max-w-2xl text-slate-200">
-              Want to talk healthcare integrations, debugging, implementation work, or interoperability?
-            </p>
-          </div>
-          <CTAButton href={siteConfig.linkedinUrl}>Connect on LinkedIn</CTAButton>
-        </div>
+        <ContactCTA>
+          Want to talk healthcare integrations, debugging, implementation work, or interoperability?
+        </ContactCTA>
       </article>
     </main>
   );
