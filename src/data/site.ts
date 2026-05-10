@@ -7,6 +7,7 @@ export const siteConfig = {
   intro:
     "My work sits at the intersection of engineering, implementation, production support, and customer workflows—designing, troubleshooting, and improving integrations across Epic, Oracle Health/Cerner, Meditech, NextGen, eClinicalWorks, FHIR, HL7, REST APIs, SOAP APIs, and SQL-backed production systems.",
   linkedinUrl: "https://www.linkedin.com/in/dawson-riggs/",
+  githubUrl: "https://github.com/dcriggs",
   nav: [
     { label: "Focus", href: "#expertise" },
     { label: "Experience", href: "#experience" },
