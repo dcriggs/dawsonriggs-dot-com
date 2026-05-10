@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { CTAButton } from "@/components/CTAButton";
-import { siteConfig } from "@/data/site";
+import { assetUrls, siteConfig } from "@/data/site";
 
 const labLinks = {
   github: "https://github.com/dcriggs/prior-auth-integration-lab",
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
       "A practical healthcare interoperability sandbox for hands-on experimentation with HL7, FHIR, SOAP APIs, payload validation, and workflow-oriented integration patterns.",
     type: "article",
     url: "https://dawsonriggs.com/case-studies/hl7-fhir-soap-integration-lab",
+    images: [assetUrls.priorAuthLabScreenshot],
   },
 };
 
@@ -63,6 +65,28 @@ const explorationThemes = [
 ];
 
 const sequenceSteps = ["Input payload", "Validate", "Map fields", "Apply workflow rules", "Review output"];
+
+function LabScreenshotPanel() {
+  return (
+    <figure className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm shadow-slate-950/5">
+      <div className="border-b border-slate-200 px-6 py-5 sm:px-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">Demo preview</p>
+        <figcaption className="mt-2 max-w-3xl text-sm leading-7 text-slate-600">
+          A snapshot of the Prior Auth Integration Lab demo interface, showing how the sandbox presents healthcare interoperability experiments in a browser-based workflow.
+        </figcaption>
+      </div>
+      <div className="relative aspect-[16/10] bg-slate-100">
+        <Image
+          src={assetUrls.priorAuthLabScreenshot}
+          alt="Prior Auth Integration Lab demo screenshot"
+          fill
+          sizes="(min-width: 1024px) 960px, calc(100vw - 48px)"
+          className="object-cover object-top"
+        />
+      </div>
+    </figure>
+  );
+}
 
 function PayloadSnippetVisual() {
   return (
@@ -188,6 +212,7 @@ export default function Hl7FhirSoapIntegrationLabPage() {
         </section>
 
         <section className="mx-auto grid max-w-5xl gap-8 px-6 pb-16 lg:px-8">
+          <LabScreenshotPanel />
           <PayloadSnippetVisual />
           <ConceptGrid />
         </section>
