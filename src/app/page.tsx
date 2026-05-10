@@ -250,7 +250,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="projects" eyebrow="Featured work / case studies" title="Clean placeholders for deeper technical stories—not inflated project claims." description="These future writeups are framed around real integration themes and resume-backed outcomes. Until they are fully written, the site keeps them clearly labeled as case study placeholders.">
+      <Section id="projects" eyebrow="Featured work / case studies" title="Field-tested stories from real healthcare integration work." description="Case studies and technical lab notes grounded in production interoperability, implementation constraints, reliability work, workflow validation, and hands-on experimentation.">
         <div className="mb-8">
           <ReliabilityDashboard />
         </div>
