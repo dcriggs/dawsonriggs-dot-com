@@ -100,37 +100,42 @@ export const siteConfig = {
   projects: [
     {
       title: "Reducing Epic API Costs by 90%",
-      type: "Future case study",
+      type: "Case study",
       description:
-        "A planned writeup on finding waste in production integration behavior, aligning workflow design with API utilization, and reducing monthly Epic API costs from $1.3M to $134K.",
+        "How a usage-based Epic API pricing model exposed hidden integration inefficiencies—and how coordinated technical and operational changes reduced monthly costs from $1.3M to $134K without breaking healthcare workflows.",
       tags: ["Epic integrations", "Cost optimization", "Production systems", "Workflow design"],
       visual: "optimization",
+      href: "/case-studies/reducing-epic-api-costs",
     },
     {
-      title: "Meditech Cold Feed Pipeline Reliability",
-      type: "Future case study",
+      title: "Reliability Engineering for Real-World Healthcare Integrations",
+      type: "Case study",
       description:
-        "A placeholder for a practical reliability case study covering implementation, debugging, code enhancements, documentation, and PDF writeback improvements from 93% to 100% for key customers.",
-      tags: ["Meditech", "Reliability", "Pipeline debugging", "Documentation"],
+        "How an intermittent Meditech document filing issue revealed timing assumptions across APIs, SQL data, SFTP delivery, and ECM routing—and how workflow-aware retry logic improved reliability from ~93% toward near-complete delivery.",
+      tags: ["Meditech", "Reliability", "Async workflows", "ECM filing"],
       visual: "pipeline",
+      href: "/case-studies/reliability-engineering-healthcare-integrations",
     },
     {
       title: "Building Reliable EHR Integration Workflows",
-      type: "Future case study",
+      type: "Field guide",
       description:
-        "A future technical narrative on designing supportable healthcare workflows across EHR APIs, HL7 messaging, configuration choices, customer constraints, and go-live readiness.",
-      tags: ["EHR integrations", "FHIR", "HL7", "Go-live support"],
+        "A practical guide to validating EHR workflows across configuration, data quality, permissions, timing, monitoring, and operational ownership—because green logs do not always prove workflow success.",
+      tags: ["EHR integrations", "Workflow validation", "Go-live readiness", "Production support"],
       visual: "workflow",
+      href: "/case-studies/building-reliable-ehr-integration-workflows",
     },
     {
       title: "HL7 / FHIR / SOAP Integration Lab",
-      type: "Integration lab placeholder",
+      type: "Integration lab",
       description:
-        "A living space for lightweight examples, implementation notes, and experiments around payload validation, mapping, troubleshooting, and workflow-oriented integration design.",
-      tags: ["FHIR", "HL7", "SOAP APIs", "REST APIs"],
+        "A lightweight technical sandbox for exploring interoperability workflows, payload validation, integration patterns, and implementation-oriented experimentation across HL7, FHIR, and SOAP-based systems.",
+      tags: ["FHIR", "HL7", "SOAP APIs", "Payload validation"],
       visual: "lab",
       githubUrl: "https://github.com/dcriggs/prior-auth-integration-lab",
       demoUrl: "https://prior-auth-integration-lab.vercel.app/",
+      href: "/case-studies/hl7-fhir-soap-integration-lab",
+      hrefLabel: "Explore lab",
     },
   ],
   writing: [

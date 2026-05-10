@@ -10,6 +10,8 @@ type ProjectCardProps = {
   visual?: string;
   githubUrl?: string;
   demoUrl?: string;
+  href?: string;
+  hrefLabel?: string;
 };
 
 function isExternalHref(href: string) {
@@ -58,10 +60,11 @@ function MiniArchitectureVisual({ visual = "workflow" }: { visual?: string }) {
   );
 }
 
-export function ProjectCard({ title, type, description, tags, visual, githubUrl, demoUrl }: ProjectCardProps) {
+export function ProjectCard({ title, type, description, tags, visual, githubUrl, demoUrl, href, hrefLabel = "Read case study" }: ProjectCardProps) {
   const links = [
     githubUrl ? { href: githubUrl, label: "GitHub" } : null,
     demoUrl ? { href: demoUrl, label: "Demo" } : null,
+    href ? { href, label: hrefLabel } : null,
   ].filter((link): link is { href: string; label: string } => Boolean(link));
 
   return (
