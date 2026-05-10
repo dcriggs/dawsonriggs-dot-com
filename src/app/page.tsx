@@ -179,24 +179,6 @@ function ReliabilityDashboard() {
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
-        <nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-4 lg:px-8" aria-label="Primary navigation">
-          <Link href="#top" className="text-sm font-bold tracking-tight text-white">
-            Dawson Riggs
-          </Link>
-          <div className="order-3 flex w-full items-center gap-1 overflow-x-auto md:order-2 md:w-auto">
-            {siteConfig.nav.map((item) => (
-              <Link key={item.href} href={item.href} className="rounded-full px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/10 hover:text-white">
-                {item.label}
-              </Link>
-            ))}
-          </div>
-          <CTAButton href={siteConfig.linkedinUrl} variant="dark" className="order-2 px-4 py-2 md:order-3">
-            LinkedIn
-          </CTAButton>
-        </nav>
-      </header>
-
       <section id="top" className="relative bg-slate-950 px-6 pb-20 pt-20 text-white sm:pb-28 sm:pt-28 lg:px-8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(37,99,235,0.28),transparent_30rem),radial-gradient(circle_at_88%_18%,rgba(20,184,166,0.35),transparent_34rem),linear-gradient(125deg,#020617_0%,#061733_48%,#042f3d_100%)]" />
         <div className="absolute inset-0 opacity-25 [background-image:radial-gradient(rgba(34,211,238,0.7)_1px,transparent_1px)] [background-size:24px_24px] [mask-image:linear-gradient(to_bottom,black,transparent_75%)]" />
@@ -331,15 +313,6 @@ export default function Home() {
           </div>
         </div>
       </Section>
-
-      <footer className="border-t border-slate-200 bg-white/70 px-6 py-8">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between lg:px-8">
-          <p>© {new Date().getFullYear()} Dawson Riggs. Built with Next.js, TypeScript, and Tailwind CSS.</p>
-          <Link href="#top" className="font-semibold text-slate-800 hover:text-teal-700">
-            Back to top ↑
-          </Link>
-        </div>
-      </footer>
     </main>
   );
 }
