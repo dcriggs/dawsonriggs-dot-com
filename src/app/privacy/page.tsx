@@ -34,18 +34,18 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2>Technical information</h2>
+            <h2>Technical information and analytics</h2>
             <p>
-              Basic hosting, analytics, or logging providers may collect standard technical information needed to operate and understand the site, such as:
+              This site uses Vercel for hosting, visitor analytics, and performance analytics. These services may collect standard technical information needed to operate, secure, improve, and understand the site, such as:
             </p>
             <ul>
-              <li>IP address</li>
-              <li>Browser and device type</li>
-              <li>Pages visited</li>
-              <li>Timestamps and referral information</li>
+              <li>IP address or derived approximate location information</li>
+              <li>Browser, operating system, network speed, and device type</li>
+              <li>Pages visited, routes, referral information, and timestamps</li>
+              <li>Web Vitals and related page performance measurements</li>
             </ul>
             <p>
-              This information is generally used for site performance, security, debugging, and aggregate usage insight.
+              Vercel Web Analytics and Speed Insights are intended to provide aggregate usage and performance insight without using third-party cookies. You can learn more in Vercel&apos;s <Link href="https://vercel.com/docs/analytics/privacy-policy" className="font-semibold text-teal-700 hover:text-teal-900" rel="nofollow noreferrer" target="_blank">Web Analytics privacy documentation</Link> and <Link href="https://vercel.com/docs/speed-insights/privacy-policy" className="font-semibold text-teal-700 hover:text-teal-900" rel="nofollow noreferrer" target="_blank">Speed Insights privacy documentation</Link>.
             </p>
           </section>
 
