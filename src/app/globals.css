@@ -28,3 +28,29 @@ body {
 ::selection {
   background: rgba(13, 148, 136, 0.22);
 }
+
+.diagram-flow-line {
+  fill: none;
+  stroke: rgba(34, 211, 238, 0.72);
+  stroke-dasharray: 7 12;
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  animation: diagram-flow 8s linear infinite;
+}
+
+.diagram-flow-line-delay {
+  animation-delay: -4s;
+  stroke: rgba(96, 165, 250, 0.62);
+}
+
+@keyframes diagram-flow {
+  to {
+    stroke-dashoffset: -152;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diagram-flow-line {
+    animation: none;
+  }
+}

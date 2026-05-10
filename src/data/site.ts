@@ -22,6 +22,13 @@ export const siteConfig = {
     { value: "400+", label: "complex support tickets resolved" },
     { value: "93% → 100%", label: "Meditech PDF writeback reliability" },
   ],
+  lifecycleSteps: ["Implementation", "Validation", "Go-live", "Monitoring", "Troubleshooting", "Optimization"],
+  careerPath: [
+    { label: "Epic Systems", detail: "MyChart TS · enterprise healthcare workflows" },
+    { label: "Luma Support", detail: "EHR issues · APIs · customer escalations" },
+    { label: "Implementation", detail: "workflow builds · validation · go-lives" },
+    { label: "Integration Engineering", detail: "FHIR · HL7 · SOAP · reliability" },
+  ],
   about: [
     "I started my career at Epic Systems as a MyChart Technical Solutions Engineer supporting patient experience workflows, telehealth integrations, and large health system go-lives. That foundation shaped how I think about interoperability: the technical path has to work, but it also has to survive operational reality.",
     "At Luma Health, I moved from Enterprise Technical Support Engineer to Implementation Specialist to Integration Engineer, working across EHR connectivity, healthcare workflows, customer implementation, escalation support, and production reliability.",
@@ -97,6 +104,7 @@ export const siteConfig = {
       description:
         "A planned writeup on finding waste in production integration behavior, aligning workflow design with API utilization, and reducing monthly Epic API costs from $1.3M to $134K.",
       tags: ["Epic integrations", "Cost optimization", "Production systems", "Workflow design"],
+      visual: "optimization",
     },
     {
       title: "Meditech Cold Feed Pipeline Reliability",
@@ -104,6 +112,7 @@ export const siteConfig = {
       description:
         "A placeholder for a practical reliability case study covering implementation, debugging, code enhancements, documentation, and PDF writeback improvements from 93% to 100% for key customers.",
       tags: ["Meditech", "Reliability", "Pipeline debugging", "Documentation"],
+      visual: "pipeline",
     },
     {
       title: "Building Reliable EHR Integration Workflows",
@@ -111,6 +120,7 @@ export const siteConfig = {
       description:
         "A future technical narrative on designing supportable healthcare workflows across EHR APIs, HL7 messaging, configuration choices, customer constraints, and go-live readiness.",
       tags: ["EHR integrations", "FHIR", "HL7", "Go-live support"],
+      visual: "workflow",
     },
     {
       title: "HL7 / FHIR / SOAP Integration Lab",
@@ -118,6 +128,7 @@ export const siteConfig = {
       description:
         "A living space for lightweight examples, implementation notes, and experiments around payload validation, mapping, troubleshooting, and workflow-oriented integration design.",
       tags: ["FHIR", "HL7", "SOAP APIs", "REST APIs"],
+      visual: "lab",
       githubUrl: "https://github.com/dcriggs/prior-auth-integration-lab",
       demoUrl: "https://prior-auth-integration-lab.vercel.app/",
     },

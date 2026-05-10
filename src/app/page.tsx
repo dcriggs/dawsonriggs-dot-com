@@ -44,6 +44,108 @@ function IntegrationLayerVisual() {
   );
 }
 
+
+function SystemsIntersectionDiagram() {
+  const quadrants = [
+    { label: "Technical systems", className: "left-4 top-4 text-cyan-100" },
+    { label: "Clinical workflows", className: "right-4 top-4 text-teal-100" },
+    { label: "Customer operations", className: "bottom-4 left-4 text-blue-100" },
+    { label: "Implementation delivery", className: "bottom-4 right-4 text-cyan-100" },
+  ];
+
+  return (
+    <div className="relative min-h-[25rem] overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950 p-6 text-white shadow-2xl shadow-slate-950/20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(34,211,238,0.24),transparent_14rem),radial-gradient(circle_at_15%_15%,rgba(37,99,235,0.18),transparent_12rem),radial-gradient(circle_at_85%_80%,rgba(20,184,166,0.18),transparent_12rem)]" />
+      <div className="absolute left-1/2 top-8 bottom-8 w-px bg-gradient-to-b from-transparent via-cyan-300/35 to-transparent" />
+      <div className="absolute left-8 right-8 top-1/2 h-px bg-gradient-to-r from-transparent via-cyan-300/35 to-transparent" />
+      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 420 420" aria-hidden="true">
+        <circle cx="210" cy="210" r="118" className="fill-none stroke-cyan-300/20" strokeWidth="1" />
+        <circle cx="210" cy="210" r="72" className="fill-none stroke-teal-300/30" strokeWidth="1" />
+        <path d="M95 105 C155 145 174 170 210 210 C246 170 265 145 325 105" className="diagram-flow-line" />
+        <path d="M95 315 C155 275 174 250 210 210 C246 250 265 275 325 315" className="diagram-flow-line diagram-flow-line-delay" />
+      </svg>
+      {quadrants.map((quadrant) => (
+        <div key={quadrant.label} className={`absolute max-w-[9rem] rounded-2xl border border-white/10 bg-white/[0.07] p-3 text-sm font-semibold leading-5 backdrop-blur ${quadrant.className}`}>
+          {quadrant.label}
+        </div>
+      ))}
+      <div className="absolute left-1/2 top-1/2 flex h-40 w-40 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[2rem] border border-cyan-300/40 bg-slate-900/90 p-5 text-center shadow-[0_0_44px_rgba(34,211,238,0.24)]">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">Intersection</p>
+          <p className="mt-2 text-lg font-semibold leading-6 text-white">Reliable healthcare integrations</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function IntegrationLifecycleDiagram() {
+  return (
+    <div className="relative mt-12 overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm shadow-slate-950/5 sm:p-6">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(20,184,166,0.12),transparent_18rem),radial-gradient(circle_at_90%_70%,rgba(37,99,235,0.1),transparent_18rem)]" />
+      <div className="relative">
+        <div className="flex items-center justify-between gap-3 overflow-x-auto pb-2">
+          {siteConfig.lifecycleSteps.map((step, index) => (
+            <div key={step} className="group relative min-w-[9.5rem] flex-1">
+              {index < siteConfig.lifecycleSteps.length - 1 ? <div className="absolute left-[calc(50%+2rem)] right-[calc(-50%+2rem)] top-8 hidden h-px bg-gradient-to-r from-teal-300 via-cyan-300 to-blue-300 md:block" /> : null}
+              <div className="relative rounded-3xl border border-slate-200 bg-white/90 p-4 shadow-sm transition group-hover:border-teal-200 group-hover:shadow-lg group-hover:shadow-teal-950/5">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-950 text-sm font-semibold text-cyan-200 shadow-[0_0_22px_rgba(34,211,238,0.22)]">
+                  {index + 1}
+                </div>
+                <p className="mt-4 text-sm font-semibold text-slate-950">{step}</p>
+                <p className="mt-2 text-xs leading-5 text-slate-500">{index < 3 ? "Delivery readiness" : "Operational reliability"}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CareerEvolutionDiagram() {
+  return (
+    <div className="mb-10 rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm shadow-slate-950/5 sm:p-6">
+      <div className="grid gap-4 md:grid-cols-4">
+        {siteConfig.careerPath.map((item, index) => (
+          <div key={item.label} className="relative rounded-3xl border border-slate-200 bg-slate-50 p-5">
+            {index < siteConfig.careerPath.length - 1 ? <div className="absolute -right-6 top-1/2 z-10 hidden h-px w-8 bg-gradient-to-r from-teal-400 to-cyan-400 md:block" /> : null}
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-700">0{index + 1}</p>
+            <h3 className="mt-3 text-lg font-semibold text-slate-950">{item.label}</h3>
+            <p className="mt-2 text-sm leading-6 text-slate-600">{item.detail}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ReliabilityDashboard() {
+  return (
+    <div className="relative overflow-hidden rounded-[2rem] border border-cyan-300/15 bg-slate-950 p-5 text-white shadow-2xl shadow-slate-950/20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(34,211,238,0.2),transparent_16rem),radial-gradient(circle_at_90%_80%,rgba(20,184,166,0.16),transparent_14rem)]" />
+      <div className="relative flex items-center justify-between border-b border-white/10 pb-4">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">Operations console</p>
+          <p className="mt-1 text-lg font-semibold">Integration health</p>
+        </div>
+        <span className="rounded-full border border-teal-300/30 bg-teal-300/10 px-3 py-1 text-xs font-semibold text-teal-100">Stable</span>
+      </div>
+      <div className="relative mt-5 grid gap-3 sm:grid-cols-3">
+        {["API health", "Queue depth", "Sync success"].map((label, index) => (
+          <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.06] p-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">{label}</p>
+            <div className="mt-4 h-2 overflow-hidden rounded-full bg-slate-800">
+              <div className={`h-full rounded-full bg-gradient-to-r from-cyan-300 to-teal-300 ${index === 1 ? "w-2/5" : "w-11/12"}`} />
+            </div>
+            <p className="mt-3 text-sm font-semibold text-slate-100">{index === 1 ? "Low" : "Healthy"}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <main className="overflow-hidden">
@@ -110,12 +212,15 @@ export default function Home() {
       </section>
 
       <Section id="story" eyebrow="Positioning" title="Healthcare integration work, grounded in implementation reality.">
-        <div className="grid gap-6 lg:grid-cols-3">
-          {siteConfig.about.map((paragraph) => (
-            <Card key={paragraph} className="text-base leading-8 text-slate-600">
-              <p>{paragraph}</p>
-            </Card>
-          ))}
+        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="grid gap-5">
+            {siteConfig.about.map((paragraph) => (
+              <Card key={paragraph} className="text-base leading-8 text-slate-600">
+                <p>{paragraph}</p>
+              </Card>
+            ))}
+          </div>
+          <SystemsIntersectionDiagram />
         </div>
       </Section>
 
@@ -125,9 +230,11 @@ export default function Home() {
             <Card key={item.title} title={item.title} description={item.description} />
           ))}
         </div>
+        <IntegrationLifecycleDiagram />
       </Section>
 
       <Section id="experience" eyebrow="Experience highlights" title="From Epic MyChart to healthcare SaaS integration engineering." className="bg-white/45">
+        <CareerEvolutionDiagram />
         <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {siteConfig.metrics.map((metric) => (
             <div key={metric.label} className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm shadow-slate-950/5">
@@ -144,6 +251,9 @@ export default function Home() {
       </Section>
 
       <Section id="projects" eyebrow="Featured work / case studies" title="Clean placeholders for deeper technical stories—not inflated project claims." description="These future writeups are framed around real integration themes and resume-backed outcomes. Until they are fully written, the site keeps them clearly labeled as case study placeholders.">
+        <div className="mb-8">
+          <ReliabilityDashboard />
+        </div>
         <div className="grid gap-6 md:grid-cols-2">
           {siteConfig.projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
