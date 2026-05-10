@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/Card";
+import { ContactCTA } from "@/components/ContactCTA";
 import { CTAButton } from "@/components/CTAButton";
 import { ExperienceItem } from "@/components/ExperienceItem";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -277,13 +278,16 @@ export default function Home() {
       <Section id="writing" eyebrow="Writing / thinking" title="Thoughtful notes on healthcare integrations, debugging, and go-live reliability." className="bg-white/45">
         <div className="grid gap-5 md:grid-cols-3">
           {siteConfig.writing.map((article) => (
-            <Card key={article.title} className="flex flex-col">
+            <Card key={article.title} className="group relative flex flex-col">
+              <Link
+                href={article.href}
+                className="absolute inset-0 z-10 rounded-3xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-700"
+                aria-label={`${article.title} article`}
+              />
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-700">{article.status}</p>
-              <h3 className="mt-4 text-xl font-semibold leading-7 text-slate-950">{article.title}</h3>
+              <h3 className="mt-4 text-xl font-semibold leading-7 text-slate-950 transition group-hover:text-teal-800">{article.title}</h3>
               <p className="mt-3 flex-1 leading-7 text-slate-600">{article.description}</p>
-              <Link href={article.href} className="mt-6 text-sm font-semibold text-teal-700 hover:text-teal-900" aria-label={`${article.title} article`}>
-                Read reflection →
-              </Link>
+              <span className="mt-6 text-sm font-semibold text-teal-700 transition group-hover:text-teal-900">Read reflection →</span>
             </Card>
           ))}
         </div>
@@ -301,17 +305,9 @@ export default function Home() {
       </Section>
 
       <Section id="contact" eyebrow="Contact" title="Open to connecting on challenging healthcare integration problems." className="pb-14">
-        <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950 p-8 text-white shadow-2xl shadow-slate-950/20 sm:p-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_10%,rgba(20,184,166,0.22),transparent_24rem)]" />
-          <div className="relative">
-            <p className="max-w-3xl text-xl leading-9 text-slate-100">
-              If you&apos;re working on challenging interoperability or integration problems in healthcare, I&apos;m open to connecting—especially around Epic integrations, Oracle Health/Cerner workflows, FHIR, HL7, implementation engineering, production troubleshooting, and reliable go-live support.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <CTAButton href={siteConfig.linkedinUrl}>Connect on LinkedIn</CTAButton>
-            </div>
-          </div>
-        </div>
+        <ContactCTA>
+          If you&apos;re working on challenging interoperability or integration problems in healthcare, I&apos;m open to connecting—especially around Epic integrations, Oracle Health/Cerner workflows, FHIR, HL7, implementation engineering, production troubleshooting, and reliable go-live support.
+        </ContactCTA>
       </Section>
     </main>
   );

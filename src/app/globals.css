@@ -56,3 +56,15 @@ body {
     animation: none;
   }
 }
+
+.linkedin-profile-badge-wrap {
+  display: flex;
+  justify-content: center;
+  min-height: 7.5rem;
+  min-width: min(100%, 20rem);
+}
+
+.linkedin-profile-badge-wrap .LI-profile-badge,
+.linkedin-profile-badge-wrap iframe {
+  max-width: 100%;
+}

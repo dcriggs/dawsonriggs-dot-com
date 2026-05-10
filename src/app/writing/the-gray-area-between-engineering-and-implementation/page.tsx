@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CTAButton } from "@/components/CTAButton";
-import { siteConfig } from "@/data/site";
+import { ContactCTA } from "@/components/ContactCTA";
 
 export const metadata: Metadata = {
   title: "The Gray Area Between Engineering and Implementation",
@@ -134,15 +133,9 @@ export default function GrayAreaBetweenEngineeringAndImplementationPage() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 rounded-[2rem] border border-slate-200 bg-slate-950 p-6 text-white sm:flex-row sm:items-center sm:justify-between sm:p-8">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-300">Connect</p>
-            <p className="mt-2 max-w-2xl text-slate-200">
-              Want to talk healthcare integrations, implementation work, or customer-facing technical ownership?
-            </p>
-          </div>
-          <CTAButton href={siteConfig.linkedinUrl}>Connect on LinkedIn</CTAButton>
-        </div>
+        <ContactCTA>
+          Want to talk healthcare integrations, implementation work, or customer-facing technical ownership?
+        </ContactCTA>
       </article>
     </main>
   );
