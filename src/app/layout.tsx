@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { assetUrls } from "@/data/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -32,6 +33,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Dawson Riggs" }],
   creator: "Dawson Riggs",
+  icons: {
+    icon: assetUrls.favicon,
+    shortcut: assetUrls.favicon,
+  },
   openGraph: {
     type: "website",
     url: "https://dawsonriggs.com",

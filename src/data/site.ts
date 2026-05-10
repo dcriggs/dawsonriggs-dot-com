@@ -20,7 +20,7 @@ export const siteConfig = {
     { value: "~90%", label: "Epic API cost reduction" },
     { value: "20+", label: "customer go-lives led" },
     { value: "400+", label: "complex support tickets resolved" },
-    { value: "93% → 100%", label: "Meditech PDF writeback reliability" },
+    { value: "93% → 100%", label: "Meditech document writeback reliability" },
   ],
   lifecycleSteps: ["Implementation", "Validation", "Go-live", "Monitoring", "Troubleshooting", "Optimization"],
   careerPath: [
@@ -74,12 +74,12 @@ export const siteConfig = {
       summary:
         "Progressed across support, implementation, and integration engineering roles focused on EHR connectivity, healthcare workflow delivery, production support, and customer-facing technical ownership.",
       highlights: [
-        "Reduced Epic API costs from $1.3M/month to $134K/month—about 90% savings—through integration and workflow optimization.",
-        "Implemented and maintained HL7 and API integrations with enterprise EHRs including Epic, Cerner, Meditech, NextGen, and eClinicalWorks.",
-        "Developed an Epic SOAP API integration workflow powering AI-enabled IVR prescription refill automation and patient self-service.",
-        "Owned the Meditech Cold Feed pipeline across implementation, debugging, code enhancements, and documentation, improving PDF writeback reliability from 93% to 100% for key customers.",
+        "Reduced Epic API costs from $1.3M/month to $134K/month (~90% savings) through integration and workflow optimization.",
+        "Owned the full lifecycle of the Meditech Cold Feed pipeline (implementation, debugging, code enhancements, and documentation), improving document writeback reliability from 93% to 100% for key customers.",
         "Led 20+ customer go-lives by configuring integration workflows and data synchronization processes across implementation, engineering, and customer success teams.",
-        "Resolved 400+ Zendesk tickets involving complex EHR integrations, APIs, and workflow issues while maintaining a greater than 95% CSAT.",
+        "Implemented and maintained HL7 and API integrations with enterprise EHRs including Epic, Cerner, Meditech, NextGen, and eClinicalWorks, enabling real-time data exchange across multiple health systems.",
+        "Served as technical liaison for healthcare clients, resolving complex interoperability, workflow, and production integration issues with minimal downtime.",
+        "Developed an Epic SOAP API integration workflow powering AI-enabled IVR prescription refill automation and patient self-service.",
       ],
     },
     {
@@ -89,11 +89,11 @@ export const siteConfig = {
       summary:
         "Supported patient experience workflows, enterprise healthcare integrations, and post-go-live operational issues for large healthcare organizations using Epic MyChart.",
       highlights: [
-        "Supported Epic telehealth workflows, including Epic Video Client (EVC) and Teladoc integrations.",
         "Led integration and post-go-live support for 8 major healthcare organizations, aligning platform functionality with operational and clinical workflow requirements.",
         "Diagnosed and documented 97+ recurring MyChart error patterns as MyChart Error Log Tech Lead, accelerating root cause analysis and issue resolution.",
-        "Wrote and optimized SQL queries supporting Epic’s largest patient record reconciliation initiative, with roughly 10M records matched.",
         "Collaborated directly with healthcare organizations to troubleshoot interoperability, workflow, and production support issues across large-scale patient engagement systems.",
+        "Wrote and optimized SQL queries supporting Epic’s largest patient record reconciliation initiative (~10M records matched).",
+        "Supported Epic telehealth workflows, including Epic Video Client (EVC) and Teladoc integrations.",
       ],
     },
   ],
@@ -169,3 +169,11 @@ export const siteConfig = {
     "Design for real-world reliability.",
   ],
 };
+
+export const assetUrls = {
+  favicon: "https://944czb3eeekaapu3.public.blob.vercel-storage.com/1729700863196.ico",
+  headshot: "https://944czb3eeekaapu3.public.blob.vercel-storage.com/DawsonRiggs_cropped_headshot.png",
+  linkedinBanner: "https://944czb3eeekaapu3.public.blob.vercel-storage.com/DawsonRiggs_finalizedLinkedInBanner.png",
+  priorAuthLabScreenshot:
+    "https://944czb3eeekaapu3.public.blob.vercel-storage.com/PriorAuthIntegrationLab-WduxMk20exjx1EtoraskXoa5acWpTK.png",
+} as const;

@@ -1,10 +1,40 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/Card";
 import { CTAButton } from "@/components/CTAButton";
 import { ExperienceItem } from "@/components/ExperienceItem";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Section } from "@/components/Section";
-import { siteConfig } from "@/data/site";
+import { assetUrls, siteConfig } from "@/data/site";
+
+function HeadshotTrustCard() {
+  return (
+    <div className="relative overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-white/[0.07] p-5 shadow-2xl shadow-cyan-950/20 backdrop-blur">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_10%,rgba(34,211,238,0.22),transparent_18rem),radial-gradient(circle_at_80%_80%,rgba(20,184,166,0.18),transparent_18rem)]" />
+      <div className="relative grid gap-5 sm:grid-cols-[auto_1fr] sm:items-center">
+        <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-[2rem] border border-cyan-200/30 bg-slate-900/60 shadow-[0_0_38px_rgba(34,211,238,0.22)] sm:mx-0">
+          <Image
+            src={assetUrls.headshot}
+            alt="Dawson Riggs"
+            fill
+            priority
+            sizes="160px"
+            className="object-contain object-bottom"
+          />
+        </div>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">Healthcare integration engineer</p>
+          <p className="mt-3 text-lg font-semibold leading-7 text-white">
+            Practical technical ownership across EHR workflows, implementation delivery, and production support.
+          </p>
+          <p className="mt-3 text-sm leading-6 text-slate-300">
+            Epic, Oracle Health/Cerner, FHIR, HL7, REST/SOAP APIs, SQL, go-lives, and reliability work.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function IntegrationLayerVisual() {
   return (
@@ -198,6 +228,7 @@ export default function Home() {
           </div>
 
           <aside className="space-y-5">
+            <HeadshotTrustCard />
             <IntegrationLayerVisual />
             <div className="grid gap-3 sm:grid-cols-2">
               {siteConfig.metrics.map((metric) => (
